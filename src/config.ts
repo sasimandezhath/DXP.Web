@@ -7,8 +7,8 @@ export const amplifyConfig = {
 };
 
 export const auth0Config = {
-  client_id: process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID,
-  domain: process.env.NEXT_PUBLIC_AUTH0_DOMAIN
+  client_id: 'CqVCkxjIhvSClstUEmxxDKjX90xDoEAG',
+  domain: 'http://fintech-dev.us.auth0.com'
 };
 
 export const firebaseConfig = {

@@ -9,13 +9,10 @@ import { AuthBanner } from '../../components/authentication/auth-banner';
 import { AmplifyVerifyCode } from '../../components/authentication/amplify-verify-code';
 import { Logo } from '../../components/logo';
 import { useAuth } from '../../hooks/use-auth';
-import { gtm } from '../../lib/gtm';
+import { gtm } from '../../core/lib/gtm'; 
 
 const platformIcons = {
-  Amplify: '/static/icons/amplify.svg',
   Auth0: '/static/icons/auth0.svg',
-  Firebase: '/static/icons/firebase.svg',
-  JWT: '/static/icons/jwt.svg'
 };
 
 const VerifyCode: NextPage = () => {

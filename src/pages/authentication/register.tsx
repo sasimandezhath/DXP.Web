@@ -6,20 +6,17 @@ import { useRouter } from 'next/router';
 import { Box, Card, Container, Divider, Link, Typography } from '@mui/material';
 import { GuestGuard } from '../../components/authentication/guest-guard';
 import { AuthBanner } from '../../components/authentication/auth-banner';
-import { AmplifyRegister } from '../../components/authentication/amplify-register';
+
 import { Auth0Register } from '../../components/authentication/auth0-register';
-import { FirebaseRegister } from '../../components/authentication/firebase-register';
-import { JWTRegister } from '../../components/authentication/jwt-register';
+
 import { Logo } from '../../components/logo';
 import { useAuth } from '../../hooks/use-auth';
-import { gtm } from '../../lib/gtm';
+import { gtm } from '../../core/lib/gtm'; 
+
 
 const platformIcons = {
-  Amplify: '/static/icons/amplify.svg',
   Auth0: '/static/icons/auth0.svg',
-  Firebase: '/static/icons/firebase.svg',
-  JWT: '/static/icons/jwt.svg'
-};
+ };
 
 const Register: NextPage = () => {
   const router = useRouter();
@@ -132,10 +129,9 @@ const Register: NextPage = () => {
                 mt: 3
               }}
             >
-              {platform === 'Amplify' && <AmplifyRegister />}
-              {platform === 'Auth0' && <Auth0Register />}
-              {platform === 'Firebase' && <FirebaseRegister />}
-              {platform === 'JWT' && <JWTRegister />}
+              
+              <Auth0Register />
+              
             </Box>
             <Divider sx={{ my: 3 }} />
             <NextLink
